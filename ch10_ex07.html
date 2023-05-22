@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hd() {
+            // var header = document.querySelector('h1');
+            var header = document.getElementById('element');
+
+            header.style.color = 'red';
+            header.innerHTML = 'From JavaScript';
+        }
+       
+    </script>
+</head>
+<body onload="hd()">
+    <h1 id="element" class="header">Lorem ipsum dolor amet</h1>
+</body>
+</html>
