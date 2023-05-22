@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var img1;
+        function changeImage() {
+            var radioArr = document.getElementsByName("radio_fruits");
+
+            for (var i = 0; i < radioArr.length; i++) {
+                if (radioArr[i].checked) {
+                    img1.src = radioArr[i].value;
+                }
+            }
+        }
+
+        function init() {
+            img1 = document.getElementById("img1");
+            img1.src = "imgs/strawberry.jpg";
+            img1.width = 400;
+            img1.height = 300;
+        }
+    </script>
+</head>
+<body onload="init()">
+    <form action="">
+        <input type="radio" name="radio_fruits" value="imgs/apple.jpg">사과
+        <input type="radio" name="radio_fruits" value="imgs/pear.jpg">배
+        <input type="radio" name="radio_fruits" value="imgs/kiwi.jpg">키위
+        <input type="radio" name="radio_fruits" value="imgs/strawberry.jpg" checked>딸기
+        <button type="button" onclick="changeImage()">이미지 변경</button>
+    </form>
+    <br>
+    <img id="img1" src="">
+</body>
+</html>
